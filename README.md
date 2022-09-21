@@ -77,7 +77,7 @@ internal class MyImplTest {
 
 ## Mutation Testing with Pitest
 
-Let's execute pitest but only with one test case `0, 0, Both A and B are zero` and see what happens:
+Let's execute **Pitest** but only with one test case `0, 0, Both A and B are zero` and see what happens:
 
 ```shell
 > ./gradlew pitest
@@ -90,12 +90,13 @@ Let's execute pitest but only with one test case `0, 0, Both A and B are zero` a
 >> Mutations with no coverage 6. Test strength 64%
 >> Ran 11 tests (0.65 tests per mutation)
 Enhanced functionality available at https://www.arcmutate.com/
-Exception in thread "main" java.lang.RuntimeException: Mutation score of 41 is below threshold of 75
+Exception in thread "main" java.lang.RuntimeException:
+Mutation score of 41 is below threshold of 75
 ```
 
-The test fails because from 17 mutations generated only 7 were killed, that is 41% below the expected threshold of 75% 😟
+The test fails because from 17 mutations generated only 7 were killed, that is 41%, below the expected threshold of 75% 😟
 
-If we examine the pitest report generated in `build/reports/pitest` we can check all the mutations applied to each line:
+If we examine the **Pitest** report generated in `build/reports/pitest` we can check all the mutations applied to each line:
 
 ![Pitest-Report-1](doc/pitest-report-1.png)
 
@@ -111,14 +112,13 @@ Then, what if we add all the test cases?
 >> Generated 17 mutations Killed 15 (88%)
 >> Mutations with no coverage 0. Test strength 88%
 >> Ran 44 tests (2.59 tests per mutation)
-Enhanced functionality available at https://www.arcmutate.com/
 ```
 
-We are on the right path, now our line coverage is 100% and from 17 mutations generated all except 2 were killed, that is 88% above our expected threshold of 75% 😃
+We are on the right path, now our line coverage is 100% and from 17 mutations generated all except 2 were killed, that is 88%, above our expected threshold of 75% 😃
 
-But wait a minute ... why there are 2 surviving mutations if I added all the possible test cases? 🤔
+But wait a minute ... why are there 2 surviving mutations if I added all the possible test cases? 🤔
 
-Let's check the pitest report again:
+Let's check the **Pitest** report again:
 
 ![Pitest-Report-2](doc/pitest-report-2.png)
 
