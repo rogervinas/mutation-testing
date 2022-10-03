@@ -1,6 +1,6 @@
 [![CI](https://github.com/rogervinas/mutation-testing/actions/workflows/gradle.yml/badge.svg)](https://github.com/rogervinas/mutation-testing/actions/workflows/gradle.yml)
 
-# Mutation Testing
+# Mutation Testing with Pitest and Kotlin
 
 [Mutation Testing](https://en.wikipedia.org/wiki/Mutation_testing) is a way to evaluate the quality of our tests by modifying ("mutating") our code and counting how many of these modifications ("mutations") do not pass the tests ("are killed"). 
 
