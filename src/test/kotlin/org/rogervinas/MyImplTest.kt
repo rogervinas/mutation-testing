@@ -14,8 +14,8 @@ internal class MyImplTest {
             "-1, 0, Either A or B are negative",
             "0, -1, Either A or B are negative",
             "-1, -1, Either A or B are negative",
-            "20, 13, A is greater than B",
-            "11, 47, B is greater than A",
+            "1, 0, A is greater than B",
+            "0, 1, B is greater than A",
             "5, 5, A and B are equal",
             "1, 1, A and B are equal",
         ]
