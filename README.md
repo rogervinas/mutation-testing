@@ -22,7 +22,7 @@ First we start creating a gradle project with kotlin DSL and [gradle-pitest-plug
 In `build.gradle.kts` we declare the plugin:
 ```kotlin
 plugins {
-    id("info.solidsoft.pitest") version "1.9.0"
+    id("info.solidsoft.pitest") version "1.9.11"
 }
 ```
 
