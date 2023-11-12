@@ -124,7 +124,7 @@ Let's check the **Pitest** report again:
 
 ![Pitest-Report-2](doc/pitest-report-2.png)
 
-{#solution}If we add these two more test cases ...
+If we add these two more test cases ...
 ```
 "1, 0, A is greater than zero",
 "0, 1, B is greater than zero",
