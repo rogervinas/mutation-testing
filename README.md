@@ -124,6 +124,26 @@ Let's check the **Pitest** report again:
 
 ![Pitest-Report-2](doc/pitest-report-2.png)
 
-Can you help me find the missing test cases? Post your solution as a pull request! 🙏
+{#solution}If we add these two more test cases ...
+```
+"1, 0, A is greater than zero",
+"0, 1, B is greater than zero",
+```
+
+And we execute **Pitest** one more time:
+
+```shell
+> ./gradlew pitest
+
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage: 8/8 (100%)
+>> Generated 17 mutations Killed 17 (100%)
+>> Mutations with no coverage 0. Test strength 100%
+>> Ran 44 tests (2.59 tests per mutation)
+```
+
+All 17 mutations were killed! 🎉
 
 Thanks and happy coding! 💙
