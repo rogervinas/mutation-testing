@@ -5,8 +5,8 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED
 import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
 
 plugins {
-    kotlin("jvm") version "1.7.10"
-    id("info.solidsoft.pitest") version "1.9.0"
+    kotlin("jvm") version "1.9.20"
+    id("info.solidsoft.pitest") version "1.9.11"
 }
 
 repositories {
@@ -27,7 +27,7 @@ dependencies {
 
 kotlin {
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
