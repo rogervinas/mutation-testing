@@ -21,23 +21,23 @@ First we start creating a gradle project with kotlin DSL and [gradle-pitest-plug
 
 In `build.gradle.kts` we declare the plugin:
 ```kotlin
-plugins {
-    id("info.solidsoft.pitest") version "1.9.0"
+plugins { 
+  id("info.solidsoft.pitest") version "1.9.0"
 }
 ```
 
 And we [configure it](https://github.com/szpak/gradle-pitest-plugin#plugin-configuration):
 ```kotlin
 configure<PitestPluginExtension> {
-    junit5PluginVersion.set("1.0.0")
-    avoidCallsTo.set(setOf("kotlin.jvm.internal"))
-    mutators.set(setOf("STRONGER"))
-    targetClasses.set(setOf("org.rogervinas.*"))
-    targetTests.set(setOf("org.rogervinas.*"))
-    threads.set(Runtime.getRuntime().availableProcessors())
-    outputFormats.set(setOf("XML", "HTML"))
-    mutationThreshold.set(75)
-    coverageThreshold.set(60)
+  junit5PluginVersion.set("1.0.0")
+  avoidCallsTo.set(setOf("kotlin.jvm.internal"))
+  mutators.set(setOf("STRONGER"))
+  targetClasses.set(setOf("org.rogervinas.*"))
+  targetTests.set(setOf("org.rogervinas.*"))
+  threads.set(Runtime.getRuntime().availableProcessors())
+  outputFormats.set(setOf("XML", "HTML"))
+  mutationThreshold.set(75)
+  coverageThreshold.set(60)
 }
 ```
 * We specify in `targetClasses` where our "to be mutated" code is and in `targetTests` where our tests are.
@@ -49,13 +49,13 @@ configure<PitestPluginExtension> {
 The implementation we are going to test is quite simple:
 ```kotlin
 class MyImpl {
-    fun doSomething(a: Int, b: Int) = when {
-        (a < 0 || b < 0) -> "Either A or B are negative"
-        (a == 0 && b == 0) -> "Both A and B are zero"
-        (a > b) -> "A is greater than B"
-        (b > a) -> "B is greater than A"
-        else -> "A and B are equal"
-    }
+  fun doSomething(a: Int, b: Int) = when {
+    (a < 0 || b < 0) -> "Either A or B are negative"
+    (a == 0 && b == 0) -> "Both A and B are zero"
+    (a > b) -> "A is greater than B"
+    (b > a) -> "B is greater than A"
+    else -> "A and B are equal"
+  }
 }
 ```
 
@@ -64,17 +64,16 @@ class MyImpl {
 For the test we use a [Junit5 Parameterized test](https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests):
 ```kotlin
 internal class MyImplTest {
-
-    @ParameterizedTest
-    @CsvSource(
-        value = [
-            "0, 0, Both A and B are zero",
-            // other cases ...
-        ]
-    )
-    fun `should do something`(a: Int, b: Int, expectedResult: String) {
-        assertThat(MyImpl().doSomething(a, b)).isEqualTo(expectedResult)
-    }
+  @ParameterizedTest
+  @CsvSource(
+    value = [
+      "0, 0, Both A and B are zero",
+      // other cases ...
+    ]
+  )
+  fun `should do something`(a: Int, b: Int, expectedResult: String) {
+    assertThat(MyImpl().doSomething(a, b)).isEqualTo(expectedResult)
+  }
 }
 ```
 
