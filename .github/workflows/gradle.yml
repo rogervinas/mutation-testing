@@ -14,13 +14,13 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up JDK
       uses: actions/setup-java@v3
       with:
         java-version: '17'
         distribution: 'temurin'
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+      uses: gradle/gradle-build-action@842c587ad8aa4c68eeba24c396e15af4c2e9f30a
       with:
         arguments: build
