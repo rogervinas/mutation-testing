@@ -1,6 +1,6 @@
 [![CI](https://github.com/rogervinas/mutation-testing/actions/workflows/gradle.yml/badge.svg)](https://github.com/rogervinas/mutation-testing/actions/workflows/gradle.yml)
 ![Java](https://img.shields.io/badge/Java-17-blue?labelColor=black)
-![Kotlin](https://img.shields.io/badge/Kotlin-1.9.22-blue?labelColor=black)
+![Kotlin](https://img.shields.io/badge/Kotlin-1.9.23-blue?labelColor=black)
 ![Pitest](https://img.shields.io/badge/Pitest-1.9.11-blue?labelColor=black)
 
 # Mutation Testing with Pitest and Kotlin
