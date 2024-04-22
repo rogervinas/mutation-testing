@@ -22,7 +22,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
 
-    testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.28.0")
+    testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.28.1")
 }
 
 kotlin {
