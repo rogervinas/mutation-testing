@@ -1,5 +1,5 @@
 [![CI](https://github.com/rogervinas/mutation-testing/actions/workflows/gradle.yml/badge.svg)](https://github.com/rogervinas/mutation-testing/actions/workflows/gradle.yml)
-![Java](https://img.shields.io/badge/Java-17-blue?labelColor=black)
+![Java](https://img.shields.io/badge/Java-21-blue?labelColor=black)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0.0-blue?labelColor=black)
 ![Pitest](https://img.shields.io/badge/Pitest-1.9.11-blue?labelColor=black)
 
