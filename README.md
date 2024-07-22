@@ -1,4 +1,4 @@
-[![CI](https://github.com/rogervinas/mutation-testing/actions/workflows/gradle.yml/badge.svg)](https://github.com/rogervinas/mutation-testing/actions/workflows/gradle.yml)
+[![CI](https://github.com/rogervinas/mutation-testing/actions/workflows/ci.yml/badge.svg)](https://github.com/rogervinas/mutation-testing/actions/workflows/ci.yml)
 ![Java](https://img.shields.io/badge/Java-21-blue?labelColor=black)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0.0-blue?labelColor=black)
 ![Pitest](https://img.shields.io/badge/Pitest-1.15.0-blue?labelColor=black)
