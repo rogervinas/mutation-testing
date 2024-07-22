@@ -2,25 +2,27 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
+    branches: [ main ]
 
 jobs:
   build:
     name: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK
+
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Set up Java
       uses: actions/setup-java@v4
       with:
-        java-version: '21'
-        distribution: 'temurin'
-    - name: Build with Gradle
+        java-version: 21
+        distribution: temurin
+        cache: gradle
+
+    - name: Build
       uses: gradle/actions/setup-gradle@v3
       with:
         arguments: build
