@@ -7,7 +7,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
 plugins {
   kotlin("jvm") version "2.2.0"
   id("info.solidsoft.pitest") version "1.15.0"
-  id("org.jlleitschuh.gradle.ktlint") version "12.3.0"
+  id("org.jlleitschuh.gradle.ktlint") version "13.0.0"
 }
 
 repositories {
